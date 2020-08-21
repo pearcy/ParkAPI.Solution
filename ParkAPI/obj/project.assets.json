@@ -12156,11 +12156,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/pearcy/epicode2/13week/ParkAPI.Solution/ParkAPI/ParkAPI.csproj",
-      "projectName": "ParkAPI",
-      "projectPath": "/Users/pearcy/epicode2/13week/ParkAPI.Solution/ParkAPI/ParkAPI.csproj",
+      "projectUniqueName": "/Users/pearcy/epicode2/13week/ParkAPI.Solution/ParkApi/ParkApi.csproj",
+      "projectName": "ParkApi",
+      "projectPath": "/Users/pearcy/epicode2/13week/ParkAPI.Solution/ParkApi/ParkApi.csproj",
       "packagesPath": "/Users/pearcy/.nuget/packages/",
-      "outputPath": "/Users/pearcy/epicode2/13week/ParkAPI.Solution/ParkAPI/obj/",
+      "outputPath": "/Users/pearcy/epicode2/13week/ParkAPI.Solution/ParkApi/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

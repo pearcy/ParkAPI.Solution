@@ -6,7 +6,7 @@
 
 _Access state and national park information via this API._
 
-<img src="ParkApi/wwwroot/assets/images/arches.jpg" style="float: left; margin-right: 10px;" />
+<img src="ParkAPI/wwwroot/assets/images/arches.jpg" style="float: left; margin-right: 10px;" />
 
 * Full CRUD functionality.
 * Pagination.

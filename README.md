@@ -4,19 +4,49 @@
 
 ## Description
 
-_This project is an API that will list state and national parks. It have full CRUD functionality, pagination and documentation of API endpoints._
+_Access state and national park information via this API._
 
 * Full CRUD functionality.
 * Pagination.
 * API endpoints instructions.
 
 
-## Specifications
+## Path Parameters
 
-| Spec | Input | Output | 
-|:--------- |:--------- |:-------- |
-| The program will construct an API of Parks | "ParkName" | "" | 
+| Parmeter | Type | Default | Description | 
+|:--------- |:--------- |:-------- |:-------- |
+| parkname | string | none | Return matches by name.| 
+| state | string | none | Return any Park by State.| 
+| type | string | none | Return matches by type of Park (State, National).| 
 
+
+## Example Query
+
+There are multiple ways to query the API. To search by parkname or a specific rating(1-5), add the parameter(s) after `parks?` 
+Example: `http://localhost:5000/api/parks?parkname=&rating=5`. Use an ampersand(&) to separate parameters.
+
+## Sample JSON Response
+```
+ {
+            "parkId": 3,
+            "parkName": "Grand Teton National Park",
+            "state": "Wyoming",
+            "type": "National",
+            "description": "The stunning beauty and abundant wildlife and plants found here have drawn humans to this place for more than 11,000 years",
+            "rating": 5
+        },
+```
+
+## Note on Pagination
+
+To search by page and/or to limit the number of results per page, add `pages?` after `parks/`, then specity the pageNumber (which page you would like to see) and pageSize (how many results you would like per page. If pageSize is not specified, the default number of results per page is 10.
+
+## Example Query
+```
+ 
+`http://localhost:5000/api/parks/pages?pageNumber=2&pageSize=5`. 
+
+```
 
 
 ## Setup/Installation Requirements
@@ -27,15 +57,6 @@ _This project is an API that will list state and national parks. It have full CR
 * To install the REPL dotnet script, run ```dotnet tool install -g dotnet-script``` in your terminal.
 * Run ```dotnet restore``` in terminal to get all dependencies.
 * Run the command ```dotnet build```.
-
-## 
-
-There are multiple ways to query the API. To search by parkname or a specific rating(1-5), add the parameter(s) after `parks?` 
-Example: `http://localhost:5000/api/parks?parkname=&rating=5`. Use an ampersand(&) to separate parameters.
-
-To search by page and/or to limit the number of results per page, add `pages?` after `parks/`, then specity the pageNumber (which page you would like to see) and pageSize (how many results you would like per page. Here is an example query:  
-`http://localhost:5000/api/parks/pages?pageNumber=2&pageSize=5`. If pageSize is not specified, the default number of results per page is 10.
-
 
 
 #### Additional Setup/Installation Notes:

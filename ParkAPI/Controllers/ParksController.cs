@@ -67,14 +67,6 @@ namespace ParkApi.Controllers
     return _db.Parks.FirstOrDefault(entry => entry.ParkId == id);
     }
 
-// pagination
-// [HttpGet("{id}")] 
-// public async Task<IActionResult> GetById(int id)
-// {
-//     var park = await _db.Parks.Where(a => a.Id == id).FirstOrDefaultAsync();
-//     return Ok(new Response<Park>(park));
-// }
-
 
   [HttpGet("pages/")]
    public async Task<IActionResult> GetAll([FromQuery] PaginationFilter filter)

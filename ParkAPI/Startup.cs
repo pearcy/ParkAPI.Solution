@@ -1,7 +1,14 @@
-﻿using ParkApi.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using ParkApi.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,7 +29,7 @@ namespace ParkApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ParkApiContext>(opt =>
-                opt.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
+            opt.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

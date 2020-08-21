@@ -6,6 +6,8 @@
 
 _Access state and national park information via this API._
 
+<img src="ParkApi/wwwroot/assets/images/arches.jpg" style="float: left; margin-right: 10px;" />
+
 * Full CRUD functionality.
 * Pagination.
 * API endpoints instructions.
@@ -24,12 +26,13 @@ _Access state and national park information via this API._
 Base URL: `http://localhost:5000`
 
 ## HTTP Request
-
-GET /api/parks
-POST /api/parks
-GET /api/parks/{id}
-PUT /api/parks/{id}
-DELETE /api/parks/{id}
+```
+- GET /api/parks
+- POST /api/parks
+- GET /api/parks/{id}
+- PUT /api/parks/{id}
+- DELETE /api/parks/{id}
+```
 
 ## Example Query
 
@@ -52,7 +55,7 @@ Example: `http://localhost:5000/api/parks?parkname=&rating=5`. Use an ampersand(
 
 To search by page and/or to limit the number of results per page, add `pages?` after `parks/`, then specity the pageNumber (which page you would like to see) and pageSize (how many results you would like per page. If pageSize is not specified, the default number of results per page is 10.
 
-## Example Query
+## Example Pagination Query
 ```
  
 http://localhost:5000/api/parks/pages?pageNumber=2&pageSize=5

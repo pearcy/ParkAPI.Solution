@@ -19,6 +19,17 @@ _Access state and national park information via this API._
 | state | string | none | Return any Park by State.| 
 | type | string | none | Return matches by type of Park (State, National).| 
 
+## Endpoints
+
+Base URL: `http://localhost:5000`
+
+## HTTP Request
+
+GET /api/parks
+POST /api/parks
+GET /api/parks/{id}
+PUT /api/parks/{id}
+DELETE /api/parks/{id}
 
 ## Example Query
 
@@ -28,13 +39,13 @@ Example: `http://localhost:5000/api/parks?parkname=&rating=5`. Use an ampersand(
 ## Sample JSON Response
 ```
  {
-            "parkId": 3,
-            "parkName": "Grand Teton National Park",
-            "state": "Wyoming",
-            "type": "National",
-            "description": "The stunning beauty and abundant wildlife and plants found here have drawn humans to this place for more than 11,000 years",
-            "rating": 5
-        },
+      "parkId": 3,
+      "parkName": "Grand Teton National Park",
+      "state": "Wyoming",
+      "type": "National",
+      "description": "The stunning beauty and abundant wildlife and plants found here have drawn humans to this place for more than 11,000 years",
+      "rating": 5
+  },
 ```
 
 ## Note on Pagination
@@ -44,10 +55,9 @@ To search by page and/or to limit the number of results per page, add `pages?` a
 ## Example Query
 ```
  
-`http://localhost:5000/api/parks/pages?pageNumber=2&pageSize=5`. 
+http://localhost:5000/api/parks/pages?pageNumber=2&pageSize=5
 
 ```
-
 
 ## Setup/Installation Requirements
 
@@ -79,14 +89,17 @@ Please feel free to contact me through GitHub (username: pearcy) with any questi
 
 ## Technologies Used
 
-* C#
-* .NET Core 2.2
-* Visual Studio Code
-* Git and Git BASH
-* MySQL Workbench
-* MySQL Database
-* API
-
+- Entity Framework Core
+- .NET Core CLI
+- ASP.NET Core Identity
+- ASP.NET Core MVC
+- .NET Core 2.2
+- MySQL & MySQL Workbench
+- C#
+- Razor
+- Visual Studio Code
+- Git Version Control
+- GitHub
 
 
 ## License

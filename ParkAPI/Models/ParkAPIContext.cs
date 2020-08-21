@@ -15,8 +15,8 @@ namespace ParkApi.Models
     builder.Entity<Park>()
         .HasData(
             new Park { ParkId = 1, ParkName = "Crater Lake National Park", State = "Oregon", Rating = 5, Type = "National", Description = "Crater Lake inspires awe."},
-            new Park { ParkId = 2, ParkName = "Tillamook State Forest", State = "Oregon", Rating = 5, Type = "State", Description = "There are seven developed fee-site campgrounds, managed on a first-come, first-served basis"},
-            new Park { ParkId = 3, ParkName = "Grand Teton National Park", State = "Wyoming", Rating = 5, Type = "National", Description = "The stunning beauty and abundant wildlife and plants found here have drawn humans to this place for more than 11,000 years"},
+            new Park { ParkId = 2, ParkName = "Tillamook State Forest", State = "Oregon", Rating = 5, Type = "State", Description = "There are seven developed fee-site campgrounds"},
+            new Park { ParkId = 3, ParkName = "Grand Teton National Park", State = "Wyoming", Rating = 5, Type = "National", Description = "The stunning beauty and abundant wildlife."},
             new Park { ParkId = 4, ParkName = "Tallman Mountain State Park", State = "New York", Rating = 4, Type = "State", Description = "The park comprises wooded country overlooking the Hudson and Piermont Marsh."},
             new Park { ParkId = 5, ParkName = "Glacier National Park", State = "Montana", Rating = 5, Type = "National", Description = "Come and experience Glacier's pristine forests, alpine meadows, rugged mountains, and spectacular lakes."},
             new Park { ParkId = 6, ParkName = "Crater Lake National Park", State = "Oregon", Rating = 5, Type = "National", Description = "Crater Lake inspires awe."},

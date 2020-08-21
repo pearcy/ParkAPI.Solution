@@ -61,11 +61,11 @@ namespace ParkApi.Controllers
     }
 
 
-    // [HttpGet("{id}")]
-    // public ActionResult<Park> Get(int id)
-    // {
-    // return _db.Parks.FirstOrDefault(entry => entry.ParkId == id);
-    // }
+    [HttpGet("{id}")]
+    public ActionResult<Park> Get(int id)
+    {
+    return _db.Parks.FirstOrDefault(entry => entry.ParkId == id);
+    }
 
 
   [HttpGet]

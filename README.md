@@ -7,8 +7,8 @@
 _This project is an API that will list state and national parks. It have full CRUD functionality, pagination and documentation of API endpoints._
 
 * Full CRUD functionality.
-* Further exploration of one of the following objectives: authentication, versioning, pagination, Swagger documentation, or CORS.
-* Complete documentation of API endpoints and the further exploration you did.
+* Pagination.
+* API endpoints instructions.
 
 
 ## Specifications
@@ -53,7 +53,7 @@ Please feel free to contact me through GitHub (username: pearcy) with any questi
 * Git and Git BASH
 * MySQL Workbench
 * MySQL Database
-
+* API
 
 
 

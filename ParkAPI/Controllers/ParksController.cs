@@ -19,7 +19,6 @@ namespace ParkApi.Controllers
       _db = db;
     }
 
-    // GET api/Parks
     [HttpGet]
     public ActionResult<IEnumerable<Park>> Get(string parkname, string state, string type)
     {

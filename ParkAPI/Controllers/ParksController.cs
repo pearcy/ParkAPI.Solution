@@ -5,6 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ParkApi.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Net.WebSockets;
+using Microsoft.AspNetCore.Http;
+using ParkApi.Wrappers;
+
 
 namespace ParkApi.Controllers
 {
@@ -56,11 +60,18 @@ namespace ParkApi.Controllers
       _db.SaveChanges();
     }
 
+    // [HttpGet("{id}")]
+    // public ActionResult<Park> Get(int id)
+    // {
+    // return _db.Parks.FirstOrDefault(entry => entry.ParkId == id);
+    // }
+
     [HttpGet("{id}")]
-    public ActionResult<Park> Get(int id)
-    {
-    return _db.Parks.FirstOrDefault(entry => entry.ParkId == id);
-    }
+   public async Task<IActionResult> GetById(int id)
+   {
+     var park = await _db.Parks.Where(a => a.ParkId == id).FirstOrDefaultAsync();
+     return Ok(new Response<Park>(park));
+   }
 
     [HttpPut("{id}")]
     public void Put(int id, [FromBody] Park park)

@@ -68,7 +68,7 @@ namespace ParkApi.Controllers
     // }
 
 
-    [HttpGet("pages/")]
+  [HttpGet]
    public async Task<IActionResult> GetAll([FromQuery] PaginationFilter filter)
    {
      var validFilter = new PaginationFilter(filter.PageNumber, filter.PageSize);

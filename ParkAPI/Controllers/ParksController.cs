@@ -60,11 +60,25 @@ namespace ParkApi.Controllers
       _db.SaveChanges();
     }
 
+
     // [HttpGet("{id}")]
     // public ActionResult<Park> Get(int id)
     // {
     // return _db.Parks.FirstOrDefault(entry => entry.ParkId == id);
     // }
+
+
+    [HttpGet("pages/")]
+   public async Task<IActionResult> GetAll([FromQuery] PaginationFilter filter)
+   {
+     var validFilter = new PaginationFilter(filter.PageNumber, filter.PageSize);
+     var pagedData = await _db.Parks
+       .Skip((validFilter.PageNumber - 1) * validFilter.PageSize)
+       .Take(validFilter.PageSize)
+       .ToListAsync();
+     var totalRecords = await _db.Parks.CountAsync();
+     return Ok(new PagedResponse<List<Park>>(pagedData, validFilter.PageNumber, validFilter.PageSize));
+   }
 
     [HttpGet("{id}")]
    public async Task<IActionResult> GetById(int id)

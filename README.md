@@ -15,7 +15,7 @@ _This project is an API that will list state and national parks. It have full CR
 
 | Spec | Input | Output | 
 |:--------- |:--------- |:-------- |
-| The program will construct a database of Parks allowing the User to make entries | "ParkName" | "" | 
+| The program will construct an API of Parks | "ParkName" | "" | 
 
 
 ## Setup/Installation Requirements

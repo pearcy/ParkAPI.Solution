@@ -7,10 +7,9 @@ namespace ParkApi.Models
         public ParkApiContext(DbContextOptions<ParkApiContext> options)
             : base(options)
         {
+
         }
-
         public DbSet<Park> Parks { get; set; }
-
         protected override void OnModelCreating(ModelBuilder builder)
   {
     builder.Entity<Park>()
@@ -27,12 +26,6 @@ namespace ParkApi.Models
             new Park { ParkId = 10, ParkName = "Glacier National Park", State = "Montana", Rating = 5, Type = "National", Description = "Come and experience Glacier's pristine forests, alpine meadows, rugged mountains, and spectacular lakes."}
             
         );
+      }
   }
-
-
-
-
-
-
-    }
 }

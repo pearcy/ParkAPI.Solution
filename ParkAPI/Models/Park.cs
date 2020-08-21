@@ -10,3 +10,4 @@ namespace ParkApi.Models
          public int Rating {get;set;}
     }
 }
+

@@ -48,7 +48,7 @@ namespace ParkApi.Migrations
                         new
                         {
                             ParkId = 2,
-                            Description = "There are seven developed fee-site campgrounds, managed on a first-come, first-served basis",
+                            Description = "There are seven developed fee-site campgrounds",
                             ParkName = "Tillamook State Forest",
                             Rating = 5,
                             State = "Oregon",
@@ -57,7 +57,7 @@ namespace ParkApi.Migrations
                         new
                         {
                             ParkId = 3,
-                            Description = "The stunning beauty and abundant wildlife and plants found here have drawn humans to this place for more than 11,000 years",
+                            Description = "The stunning beauty and abundant wildlife.",
                             ParkName = "Grand Teton National Park",
                             Rating = 5,
                             State = "Wyoming",

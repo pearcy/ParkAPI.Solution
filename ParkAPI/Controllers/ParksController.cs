@@ -24,7 +24,7 @@ namespace ParkApi.Controllers
     }
 
     [HttpGet]
-    public ActionResult<IEnumerable<Park>> Get(string parkname, string state, string type)
+    public ActionResult<IEnumerable<Park>> GetAction(string parkname, string state, string type)
     {
       var query = _db.Parks.AsQueryable();
 
@@ -48,12 +48,8 @@ namespace ParkApi.Controllers
 
     }
 
-    public ActionResult<IEnumerable<Park>> Get()
-    {
-      return _db.Parks.ToList();
-    }
-
-
+   
+    [HttpPost]
     public void Post([FromBody] Park park)
     {
       _db.Parks.Add(park);
@@ -61,14 +57,7 @@ namespace ParkApi.Controllers
     }
 
 
-    [HttpGet("{id}")]
-    public ActionResult<Park> Get(int id)
-    {
-    return _db.Parks.FirstOrDefault(entry => entry.ParkId == id);
-    }
-
-
-  [HttpGet("pages/")]
+  [HttpGet("pages/")]  // pagination
    public async Task<IActionResult> GetAll([FromQuery] PaginationFilter filter)
    {
      var validFilter = new PaginationFilter(filter.PageNumber, filter.PageSize);
@@ -80,7 +69,7 @@ namespace ParkApi.Controllers
      return Ok(new PagedResponse<List<Park>>(pagedData, validFilter.PageNumber, validFilter.PageSize));
    }
 
-    [HttpGet("{id}")]
+    [HttpGet("{id}")] // pagination
    public async Task<IActionResult> GetById(int id)
    {
      var park = await _db.Parks.Where(a => a.ParkId == id).FirstOrDefaultAsync();

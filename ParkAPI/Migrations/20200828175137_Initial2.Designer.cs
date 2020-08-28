@@ -8,8 +8,8 @@ using ParkApi.Models;
 namespace ParkApi.Migrations
 {
     [DbContext(typeof(ParkApiContext))]
-    [Migration("20200821213459_SeedData3")]
-    partial class SeedData3
+    [Migration("20200828175137_Initial2")]
+    partial class Initial2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -50,7 +50,7 @@ namespace ParkApi.Migrations
                         new
                         {
                             ParkId = 2,
-                            Description = "There are seven developed fee-site campgrounds, managed on a first-come, first-served basis",
+                            Description = "There are seven developed fee-site campgrounds",
                             ParkName = "Tillamook State Forest",
                             Rating = 5,
                             State = "Oregon",
@@ -59,7 +59,7 @@ namespace ParkApi.Migrations
                         new
                         {
                             ParkId = 3,
-                            Description = "The stunning beauty and abundant wildlife and plants found here have drawn humans to this place for more than 11,000 years",
+                            Description = "The stunning beauty and abundant wildlife.",
                             ParkName = "Grand Teton National Park",
                             Rating = 5,
                             State = "Wyoming",
